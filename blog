@@ -10,6 +10,9 @@ main() {
   build-container)
     build_container "$@"
     ;;
+  deploy)
+    deploy "$@"
+    ;;
   help)
     usage
     exit 0
@@ -32,6 +35,10 @@ run() {
     build_container
     run_container
   fi
+}
+
+deploy() {
+  docker run -it --rm -p 5000:5000 -v $(pwd):/source -v "$HOME"/.ssh:/home/cromo/.ssh cr bash -c 'lektor build && lektor deploy'
 }
 
 build_container() {
