@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+run() {
+  docker run -it --rm -p 5000:5000 -v $(pwd):/source cr
+}
+
+if ! run; then
+    docker build -t cr .
+    run
+fi
