@@ -6,14 +6,14 @@
     <h2>{{ post.title }}</h2>
   {% endif %}
   <p class="meta">
-    written by
-    {% if post.twitter_handle %}
-      <a href="https://twitter.com/{{ post.twitter_handle
-        }}">{{ post.author or post.twitter_handle }}</a>
-    {% else %}
-      {{ post.author }}
+    created: {{ post.pub_date }};
+    {% if post.mod_date %}
+      modified: {{ post.mod_date }};
     {% endif %}
-    on {{ post.pub_date }}
+    status: {{ post.status }}; belief: {{ post.belief }};
+    {% for tag in post.tags %}
+      #{{ tag }}
+    {% endfor %}
   </p>
   {{ post.body }}
   </div>
