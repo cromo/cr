@@ -7,9 +7,9 @@ RUN apt-get update && \
     ssh \
     -y && \
   rm -rf /var/lib/apt/lists/*
-RUN mkdir /home/cromo && \
-  groupadd --gid 1000 cromo && \
-  useradd --uid 1000 --gid 1000 cromo && \
-  chown cromo /home/cromo /source && \
-  chgrp cromo /home/cromo /source
-USER cromo
+RUN mkdir /home/cristian && \
+  groupadd --gid 1000 cristian && \
+  useradd --uid 1000 --gid 1000 cristian && \
+  chown cristian /home/cristian /source && \
+  chgrp cristian /home/cristian /source
+USER cristian
