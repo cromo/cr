@@ -26,7 +26,7 @@ main() {
 
 usage() {
     cat <<EOF
-$0 (run | build-container)
+$0 (run | build-container | deploy)
 EOF
 }
 
