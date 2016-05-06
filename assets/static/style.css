@@ -59,3 +59,28 @@ div.page h2 {
 div.page h2:first-of-type {
     margin-top: 6px;
 }
+
+@media (max-width: 888px) {
+    header, footer, div.page {
+	width: auto;
+    }
+    
+    header h1 {
+	font-size: 30px;
+	padding: 20px
+    }
+
+    header nav ul {
+	margin: 2px;
+	padding-left: 26px;
+    }
+
+    footer {
+	padding: 2px;
+    }
+
+    div.page {
+	padding: 0px;
+	border: none;
+    }
+}
