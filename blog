@@ -13,6 +13,9 @@ main() {
   deploy)
     deploy "$@"
     ;;
+  shell)
+    run bash
+    ;;
   help)
     usage
     exit 0
@@ -26,14 +29,14 @@ main() {
 
 usage() {
     cat <<EOF
-$0 (run | build-container | deploy)
+$0 (run | build-container | deploy | shell)
 EOF
 }
 
 run() {
-  if ! run_container; then
+  if ! run_container "$@"; then
     build_container
-    run_container
+    run_container "$@"
   fi
 }
 
@@ -42,11 +45,15 @@ deploy() {
 }
 
 build_container() {
-  docker build -t cr .
+  docker build \
+    --build-arg external_username=$(id --user --name) \
+    --build-arg external_uid=$(id --user) \
+    --build-arg external_gid=$(id --group) \
+    -t cr .
 }
 
 run_container() {
-  docker run -it --rm -p 5000:5000 -v $(pwd):/source -v "$HOME"/.ssh:/home/cristian/.ssh cr
+  docker run -it --rm -p 5000:5000 -v $(pwd):/source -v "$HOME"/.ssh:/home/cristian/.ssh cr "$@"
 }
 
 main "$@"

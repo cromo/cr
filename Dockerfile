@@ -7,9 +7,13 @@ RUN apt-get update && \
     ssh \
     -y && \
   rm -rf /var/lib/apt/lists/*
-RUN mkdir /home/cristian && \
-  groupadd --gid 1000 cristian && \
-  useradd --uid 1000 --gid 1000 cristian && \
-  chown cristian /home/cristian /source && \
-  chgrp cristian /home/cristian /source
+
+ARG external_username
+ARG external_uid
+ARG external_gid
+RUN mkdir /home/$external_username && \
+  groupadd --gid 1000 $external_username && \
+  useradd --uid $external_uid --gid $external_gid cristian && \
+  chown $external_username /home/$external_username /source && \
+  chgrp $external_username /home/$external_username /source
 USER cristian
