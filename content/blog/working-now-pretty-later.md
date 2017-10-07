@@ -1,17 +1,12 @@
-title: Working now, pretty later
 ---
-pub_date: 2016-01-03
----
-author: Cristián Romo
----
+title: "Working now, pretty later"
+date: 2016-02-07T00:00:00-05:00
+tags: [psychology]
+
+modified: false
 status: in progress
----
 belief: likely
 ---
-tags: psychology
----
-body:
-
 I'm an idea factory. I come up with new ideas for projects all the time. Whether it's a new tool that would be handy at my work, or a silly game idea, or something to do around the house, there's an endless stream of ideas.
 
 The hard part is execution. When will I be able to work on these ideas? When I can work on these ideas, will I have the motivation to do it? Will I even remember what ideas I had that I wanted to work on?

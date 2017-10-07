@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+<div class="blog-post">
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "blog" }}
+    <div class="meta">
+        created: {{ .Date.Format "2006/01/02" }};
+        {{ if .Params.modified }}modified: {{ .Lastmod.Format "2006/01/02" }};{{ end }}
+        status: {{ .Params.status }};
+        belief: {{ .Params.belief }};
+        {{ range .Params.tags }}#{{ . }} {{ end }}
+    </div>
+    {{ end }}
+    <main>
+        {{ .Content }}
+    </main>
+</div>
+{{ partial "footer.html" . }}

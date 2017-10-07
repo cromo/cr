@@ -29,7 +29,7 @@ header {
     padding: 20px 60px 20px 0px;
 }
 
-header h1 {
+#logo {
     border: 1px solid #210;
     margin: 0;
     font-weight: bold;
@@ -52,35 +52,35 @@ div.page {
     border: 1px solid #210;
 }
 
-div.page h2 {
+div.page h1 {
     font-size: 22px;
 }
 
-div.page h2:first-of-type {
+div.page h1:first-of-type {
     margin-top: 6px;
 }
 
 @media (max-width: 888px) {
     header, footer, div.page {
-	width: auto;
+        width: auto;
     }
-    
-    header h1 {
-	font-size: 30px;
-	padding: 20px
+
+    #logo {
+        font-size: 30px;
+        padding: 20px
     }
 
     header nav ul {
-	margin: 2px;
-	padding-left: 26px;
+        margin: 2px;
+        padding-left: 26px;
     }
 
     footer {
-	padding: 2px;
+        padding: 2px;
     }
 
     div.page {
-	padding: 0px;
-	border: none;
+        padding: 0px;
+        border: none;
     }
 }

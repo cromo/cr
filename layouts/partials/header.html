@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode }}">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}">
+        <title>
+            {{- if eq .Title "Blogs" -}}
+                Blog posts
+            {{- else -}}
+                {{ .Title }}
+            {{- end }} — {{ .Site.Title -}}
+        </title>
+    </head>
+    <body>
+        <header>
+            <div id="logo">Cr</div>
+            <nav>
+                <ul class="nav navbar-nav">
+                    {{- range .Site.Menus.main }}
+                    <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    {{- end }}
+                </ul>
+            </nav>
+        </header>
+        <div class="page">

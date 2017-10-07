@@ -1,22 +1,11 @@
-title: Boot, reboot, repeat
 ---
-_hidden: no
----
-pub_date: 2016-05-30
----
-author: Cristián Romo
----
+title: "Boot, reboot, repeat"
+date: 2016-05-30T00:00:00-05:00
+tags: [hardware, troubleshooting]
+
 status: in progress
----
 belief: log
 ---
-tags:
-
-hardware
-troubleshooting
----
-body:
-
 It'd been a good run. The first computer I built, Amethyst, appeared to finally be dying after nearly five years of service. This is the tale of bringing it back from the brink.
 
 I had left my computer on during the day for a number of years in case I need to get something from it when away from home. One day at work, my girlfriend calls and tells me that my computer keeps rebooting itself. I tell her to turn it off and I'll have a look at it when I get home.
@@ -25,17 +14,17 @@ I get off work and head home, intriged as to what was causing my computer to fin
 
 I decided to turn the system off and wait a while before trying again. I have had heat issues in the past due to the heatsink not being seated properly. The symptoms were similar - sudden shutdowns.
 
-In one of the next few boots, I manage to make it all the way into Windows, where I can use [SpeedFan](http://www.almico.com/speedfan.php) to check the system temperatures. All normal. Well, the system hadn't rebooted yet, so I took the opportunity to check the other stats that SpeedFan monitors, including the hard drive S.M.A.R.T. info. No warnings or errors anywhere to be seen. Then, you guessed it, the system rebooted again.
+In one of the next few boots, I manage to make it all the way into Windows, where I can use [SpeedFan](http://www.almico.com/speedfan.php) to check the system temperatures. All normal. Well, the system hadn't rebooted yet, so I took the opportunity to check the other stats that SpeedFan monitors, including the hard drive S.M.A.R.T. info. No warnings or errors anywhere to be seen. Then - you guessed it - the system rebooted again.
 
 My next thought was to boot into the BIOS to see if it detects any hardware issues. I do so, then start poking around the interface to see if it can give me any diagnostics. Suddenly, the screen turns black and I hear the system fans power down and spinning up again. Well, that tells me it's not an issue with Windows.
 
-While I'm confident that Windows itself isn't causing the problem, I still suspect that the drive it's installed on may be causing the issues. To eliminate it as a possible cause, I pull the data and power cables for the drive. While I was pulling cables, I disconnect the other disk drive and the two optical drive cables too. I power on the system and wait for a reboot.
+While I'm confident that Windows itself isn't causing the problem, I still suspect that the drive it's installed on may be causing the issues. To eliminate it as a possible cause, I pull the data and power cables for the drive. While I was pulling cables, I disconnect the other disk drive and the two optical drive cables for good measure. I press the power button and wait for a reboot.
 
 It appears stable for a minute, but suddenly it reboots itself. It's not the drives.
 
-At this point I figure it is likely a bad stick of RAM. I try removing all six sticks and start testing them one by one. All of them exhibit the same behavior.
+At this point I figure it is likely a bad stick of RAM. I try removing all six sticks and start testing them one by one. Each one exhibits the same behavior.
 
-At this point I start to get worried - maybe my CPU or motherboard is going out. But before I can worry about that, I needed to test the power supply. Unfortunately, I didn't have any spares laying around, and asking friends in the area came up empty. One of them worked at a computer repair shop and said that he'd ask his manager if we could try swapping out my power supply with their test spare when he was off work.
+At this point I start to get worried that my CPU or motherboard is going out. But before I can worry about that, I needed to test the power supply. Unfortunately, I didn't have any spares laying around, and asking friends in the area came up empty. One of them worked at a computer repair shop and said that he'd ask his manager if we could try swapping out my power supply with their test spare when he was off work.
 
 A few days later, we got the okay to come in and try the swap. After opening up the box and swapping out the sprawling power cables, we boot the system. Watching the boot on one of their monitors, we jump into the BIOS to check whether the system is stable. To our surprise, it appears to be working just fine, so we declare that I needed a new power supply.
 

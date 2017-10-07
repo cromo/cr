@@ -1,8 +1,0 @@
-[project]
-name = cr
-
-[servers.production]
-name = Production
-enabled = yes
-default = yes
-target = rsync://ec2_ubuntu/home/ubuntu/blog

@@ -1,14 +1,14 @@
-title: Projects
 ---
-body:
-
+title: "Projects"
+date: 2017-10-06T23:16:38-05:00
+---
 Command line tools:
 
 * [gostache (Go)](https://github.com/cromo/gostache) - [mustache](https://mustache.github.io/) template renderer in Go.
 * [synesthesia (Python)](https://github.com/cromo/synesthesia) - colorize text according to its contents, so that multiple runs of the program will colorize the same text the same color.
 * [grokpat (Python)](https://github.com/cromo/grokpat) - lookup and expand the well tested [grok](https://www.elastic.co/guide/en/logstash/current/plugins-filters-grok.html) patterns from [Logstash](https://www.elastic.co/products/logstash).
 * [redi (Python)](https://github.com/cromo/redi) - change the "color" of regular expressions from one engine to another; created to convert the output of grokpat (Ruby regex) for consumption by synesthesia (Python regex).
-* [pressure (Python)](https://github.com/cromo/pressure) - measures the rate of output of `stdin`.
+* [pressure (Python)](https://github.com/cromo/pressure) - measures the rate of data on `stdin`.
 * [sostenuto (Python)](https://github.com/cromo/sostenuto) - reduce the noise of streaming output by "sustaining" common lines.
 * [heat (Python)](https://github.com/cromo/heat) - show how hot numbers are on a scale.
 
