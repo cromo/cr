@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# Remove any temporary files left over from authoring and build from scratch.
+rm -rf "${script_dir}/public"
+hugo
+
+# Equivalent to `rsync -azP ...`.
+rsync --archive --compress --partial --progress "${script_dir}/public/" cristianromo.com:web/blog
