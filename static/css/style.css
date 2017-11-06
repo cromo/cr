@@ -60,6 +60,16 @@ div.page h1:first-of-type {
     margin-top: 6px;
 }
 
+pre, code {
+    background-color: #DDD;
+}
+
+pre {
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 6px;
+}
+
 @media (max-width: 888px) {
     header, footer, div.page {
         width: auto;
