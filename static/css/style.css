@@ -56,6 +56,10 @@ div.page h1 {
     font-size: 22px;
 }
 
+div.page h2 {
+    font-size: 19px;
+}
+
 div.page h1:first-of-type {
     margin-top: 6px;
 }
