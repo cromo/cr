@@ -8,16 +8,12 @@ modified: false
 status: in progress
 belief: certain
 ---
+
 One day I saw a blog post on Hacker News about a release of the Red programming language. Having never heard of it before and seeing the comments praising the effort, I decided to investigate. I thought it looked interesting, but being quite different from any language I had ever seen before - which, being a language nerd, this was interesting in its own right - and I couldn't make heads or tails out of any code. Namely, it just looked like a jumble of identifiers - I couldn't tell what was a variable, what was a function, or how many arguments functions took. It also didn't help that a trailing colon is used for assignment which was so different from anything I've seen before that it just wouldn't stick in my head.
 
 The comments on Hacker News mentioned that Red was homoiconic like lisp - that the code is a valid data literal within the language. If you've seen lisp code - or even heard of people complain about it - you know that it has parentheses everywhere to delimit function and macro calls. This made me wonder - how does Red delimit function calls?
 
-((maybe a treatise on how other languages call functions? C-like, haskell, lisp; maybe make its own section to introduce the problem?))
-
 My curiosity whet, I dived into the Red documentation. Actually, it pointed me at a book for the language Red is inspired by and modeled after, Rebol 2. It took a while before even it explained how to read function calls, even though it used them through the first several chapters. Thus, this post introduces how to understand function calls in Red and Rebol.
-
-((maybe move this up to the top?))  
-After spending way too long to figure out how Red delimits function calls, ...
 
 ## Fixed arity
 
@@ -125,7 +121,7 @@ To define a function that takes refinements, just specify a parameter that start
 1 false true 2
 ```
 
-## Variable arguments sorta
+## Variable arguments - sort of
 
 So is there a way to simulate variable argument lists? Absolutely - if a variable number of arguments are needed, they are instead passed as Red's primary data structure - a block. `print` is an example of a function that accepts both individual values and a block of values. If given a single value, it converts it to a string and prints it. If given a block, it converts each element to a string and prints the values separated by spaces.
 
@@ -138,5 +134,9 @@ hello there
 3 true string!
 ```
 
-So there you have it - how Red and Rebol know where one function's arguments end and another's begins. It's depends on the binding of the identifiers in the code when that block is executed.
+So there you have it - how to tell where one function's arguments end and another's begins. There's one complication - it depends on the binding of the identifiers in the code when that block is executed, meaning it's possible to rebind words to change what function gets called, and thus the arity *could* change - but if you have to contend with spurious rebinding, you have bigger problems.
+
+So reading Red and Rebol isn't difficult as long as you know the arity of the functions in the code you're reading. While it's not too difficult to 
+
+(something about the rebol dictionary)
 
